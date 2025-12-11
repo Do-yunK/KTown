@@ -99,7 +99,9 @@
         <div class="container pb-3">
 
         <!-- Image Carousel -->
-        <div id="businessCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+
+        <div id="businessCarousel" class="carousel slide mb-4" data-bs-ride="carousel" style="position: relative;">
+            <i class="bi bi-heart" style="position: absolute; top: 12px; right: 12px; font-size: 1.5rem; cursor: pointer; color: white; z-index: 10; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
             <div class="carousel-inner rounded-3 overflow-hidden">
                 <div class="carousel-item active">
                     <img src="images/cups.jpg" class="d-block w-100" alt="Business Image" style="height: 300px; object-fit: cover;">
@@ -126,11 +128,11 @@
             <h2 class="mb-3">Business Name</h2>
             
             <!-- Rating -->
-            <div class="mb-3">
-                <span class="badge bg-light text-dark me-2">
+            <div class="mb-3 d-flex justify-content-between align-items-center">
+                <span class="badge bg-light text-muted">
                     <i class="bi bi-star-fill"></i> 4.5 (128 reviews)
                 </span>
-                <span class="badge bg-secondary">Closed • Opens at 10:00 AM</span>
+                <span class="badge bg-secondary" style="opacity: 0.5;">Closed • Opens at 10:00 AM</span>
             </div>
 
             <!-- Location and Contact -->
@@ -140,7 +142,7 @@
                     <div class="d-flex align-items-start mb-3">
                         <i class="bi bi-geo-alt-fill text-danger me-3" style="font-size: 1.25rem;"></i>
                         <div>
-                            <p class="mb-0"><strong>Location</strong></p>
+                            <p class="mb-0">Location</p>
                             <p class="mb-0 text-muted">123 Bloor Street, Toronto, ON M5V 3A8</p>
                         </div>
                     </div>
@@ -149,7 +151,7 @@
                     <div class="d-flex align-items-start">
                         <i class="bi bi-telephone-fill text-primary me-3" style="font-size: 1.25rem;"></i>
                         <div>
-                            <p class="mb-0"><strong>Contact</strong></p>
+                            <p class="mb-0">Contact</p>
                             <p class="mb-0 text-muted">(416) 555-0123</p>
                         </div>
                     </div>
@@ -164,32 +166,15 @@
             </div>
             <div class="card-body">
                 <div class="d-flex justify-content-between mb-2">
-                    <span>Monday</span>
+                    <span>Mon - Fri</span>
                     <span class="text-muted">10:00 AM - 10:00 PM</span>
                 </div>
                 <div class="d-flex justify-content-between mb-2">
-                    <span>Tuesday</span>
-                    <span class="text-muted">10:00 AM - 10:00 PM</span>
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                    <span>Wednesday</span>
-                    <span class="text-muted">10:00 AM - 10:00 PM</span>
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                    <span>Thursday</span>
-                    <span class="text-muted">10:00 AM - 10:00 PM</span>
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                    <span>Friday</span>
-                    <span class="text-muted">10:00 AM - 11:00 PM</span>
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                    <span>Saturday</span>
-                    <span class="text-muted">11:00 AM - 11:00 PM</span>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <span>Sunday</span>
+                    <span>Sat - Sun</span>
                     <span class="text-muted">11:00 AM - 9:00 PM</span>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                    <span>Holiday hours may vary</span>
                 </div>
             </div>
         </div>
@@ -197,7 +182,7 @@
         <!-- Business Description -->
         <div class="card mb-4 border-0 shadow-sm">
             <div class="card-header bg-light">
-                <h6 class="mb-0"><i class="bi bi-info-circle me-2"></i> About</h6>
+                <h6 class="mb-0"><i class="bi bi-info-circle me-2"></i>Description</h6>
             </div>
             <div class="card-body">
                 <p class="mb-0">Welcome to our Korean business! We pride ourselves on offering authentic Korean cuisine and hospitality. 
@@ -261,6 +246,27 @@
                     window.location.href = 'index.html';
                 }, 300);
             }
+
+            // Heart icon toggle
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('bi-heart') || e.target.classList.contains('bi-heart-fill')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.target.classList.toggle('bi-heart');
+                    e.target.classList.toggle('bi-heart-fill');
+                    
+                    // Toggle color and outline
+                    if (e.target.classList.contains('bi-heart-fill')) {
+                        e.target.style.color = '#ec4899';
+                        e.target.style.webkitTextStroke = '2px white';
+                        e.target.style.textShadow = '0 0 3px white';
+                    } else {
+                        e.target.style.color = 'white';
+                        e.target.style.webkitTextStroke = '';
+                        e.target.style.textShadow = '0 2px 4px rgba(0,0,0,0.3)';
+                    }
+                }
+            });
         });
     </script>
 

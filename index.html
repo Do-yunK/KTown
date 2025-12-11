@@ -24,6 +24,42 @@
 
     <link href="style.css" rel="stylesheet">
 
+    <style>
+        .popularlocations .cards-wrapper {
+            justify-content: flex-start;
+            padding-left: 0;
+        }
+
+        .popularlocations .card:first-child {
+            margin-left: 0 !important;
+        }
+
+        .popularlocations .card-title {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+
+        .upcomingevents .cards-wrapper {
+            justify-content: flex-start;
+            padding-left: 0;
+        }
+
+        .upcomingevents .card:first-child {
+            margin-left: 0 !important;
+        }
+
+        .upcomingevents .card-title {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .card .bi-heart {
+            -webkit-text-stroke: 1px white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -52,167 +88,122 @@
 
         <h6>Popular Locations</h6>
 
-        <div id="carousellocations" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="cards-wrapper">
-
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/cups.jpg" class="card-img-top" alt="owlminerva">
-                            <div class="card-img-overlay text-end">
-                                <i class="bi bi-heart text-light"></i>
-                            </div>
-
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text mb-0">Location</p>
-                                <small class="text-muted mb-0">RATING</small>
-                                <a href="gohere.html" class="stretched-link"></a>
-                            </div>
-                        </div>
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/owlminerva.jpg" class="card-img-top" alt="hodo">
-                            <div class="card-img-overlay text-end">
-                                <i class="bi bi-heart text-light"></i>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text mb-0">Location</p>
-                                <small class="text-muted mb-0">RATING</small>
-                                <a href="" class="stretched-link"></a>
-                            </div>
-                        </div>
-
+        <div class="popularlocations">
+            <div class="cards-wrapper d-flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/cups.jpg" class="card-img-top" alt="cups"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-img-overlay text-end">
+                        <i class="bi bi-heart text-light"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Cups Bingsu</h6>
+                        <p class="card-text text-dark" style="font-size: 0.75rem;">Dessert</p>
+                        <span class="badge bg-light text-muted me-2">
+                            <i class="bi bi-star-fill"></i> 4.5 (38 reviews)
+                        </span>
+                        <a href="gohere.html" class="stretched-link"></a>
                     </div>
                 </div>
-
-                <div class="carousel-item">
-                    <div class="cards-wrapper">
-
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/hodo.jpg" class="card-img-top" alt="hodo">
-                            <div class="card-img-overlay text-end">
-                                <i class="bi bi-heart text-light"></i>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text mb-0">Location</p>
-                                <small class="text-muted mb-0">RATING</small>
-                                <a href="" class="stretched-link"></a>
-                            </div>
-                        </div>
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/innisfree.jpg" class="card-img-top" alt="union">
-                            <div class="card-img-overlay text-end">
-                                <i class="bi bi-heart text-light"></i>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text mb-0">Location</p>
-                                <small class="text-muted mb-0">RATING</small>
-                                <a href="" class="stretched-link"></a>
-                            </div>
-                        </div>
-
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/owlminerva.jpg" class="card-img-top" alt="location"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-img-overlay text-end">
+                        <i class="bi bi-heart text-light"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Owl of Minerva</h6>
+                        <p class="card-text text-dark" style="font-size: 0.75rem;">Restaurant</p>
+                        <span class="badge bg-light text-muted me-2">
+                            <i class="bi bi-star-fill"></i> 4.5 (38 reviews)
+                        </span>
+                        <a href="gohere.html" class="stretched-link"></a>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/hodo.jpg" class="card-img-top" alt="location"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-img-overlay text-end">
+                        <i class="bi bi-heart text-light"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Hodo Kwaja</h6>
+                        <p class="card-text text-dark" style="font-size: 0.75rem;">Bakery</p>
+                        <span class="badge bg-light text-muted me-2">
+                            <i class="bi bi-star-fill"></i> 4.5 (38 reviews)
+                        </span>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/innisfree.jpg" class="card-img-top" alt="location"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-img-overlay text-end">
+                        <i class="bi bi-heart text-light"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Innisfree</h6>
+                        <p class="card-text text-dark" style="font-size: 0.75rem;">Beauty</p>
+                        <span class="badge bg-light text-muted me-2">
+                            <i class="bi bi-star-fill"></i> 4.5 (38 reviews)
+                        </span>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousellocations"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousellocations"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-
-        <!-- Section 1 MODALS -->
-
 
 
         <!-- Cards Section 2 -->
 
         <h6>Upcoming Events</h6>
 
-        <div id="carouselevents" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="cards-wrapper">
-
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/Union.jpg" class="card-img-top" alt="union">
-                            <div class="card-img-overlay text-end">
-                                <i class="bi bi-heart text-light"></i>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text mb-0">Location</p>
-                                <small class="text-muted mb-0">RATING</small>
-
-                            </div>
-                        </div>
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/Union.jpg" class="card-img-top" alt="union">
-                            <div class="card-img-overlay text-end">
-                                <i class="bi bi-heart text-light"></i>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text mb-0">Location</p>
-                                <small class="text-muted mb-0">RATING</small>
-
-                            </div>
-                        </div>
-
+        <div class="upcomingevents">
+            <div class="cards-wrapper d-flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/cups.jpg" class="card-img-top" alt="cups"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-img-overlay text-end">
+                        <i class="bi bi-heart text-light"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Cups Bingsu</h6>
+                        <p class="card-text text-dark" style="font-size: 0.75rem;">Dessert</p>
                     </div>
                 </div>
-
-                <div class="carousel-item">
-                    <div class="cards-wrapper">
-
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/Union.jpg" class="card-img-top" alt="union">
-                            <div class="card-img-overlay text-end">
-                                <i class="bi bi-heart text-light"></i>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text mb-0">Location</p>
-                                <small class="text-muted mb-0">RATING</small>
-
-                            </div>
-                        </div>
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/Union.jpg" class="card-img-top" alt="union">
-                            <div class="card-img-overlay text-end">
-                                <i class="bi bi-heart text-light"></i>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text mb-0">Location</p>
-                                <small class="text-muted mb-0">RATING</small>
-
-                            </div>
-                        </div>
-
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/owlminerva.jpg" class="card-img-top" alt="location"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-img-overlay text-end">
+                        <i class="bi bi-heart text-light"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Owl of Minerva</h6>
+                        <p class="card-text text-dark" style="font-size: 0.75rem;">Restaurant</p>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/hodo.jpg" class="card-img-top" alt="location"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-img-overlay text-end">
+                        <i class="bi bi-heart text-light"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Hodo Kwaja</h6>
+                        <p class="card-text text-dark" style="font-size: 0.75rem;">Bakery</p>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/innisfree.jpg" class="card-img-top" alt="location"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-img-overlay text-end">
+                        <i class="bi bi-heart text-light"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Innisfree</h6>
+                        <p class="card-text text-dark" style="font-size: 0.75rem;">Beauty</p>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselevents" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselevents" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-
-
-
 
 
 
