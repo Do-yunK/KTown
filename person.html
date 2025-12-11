@@ -38,6 +38,24 @@
             padding-top: 0 !important;
             padding-bottom: 0 !important;
         }
+
+        .btn-primary {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .btn-primary:hover {
+            background-color: #004494;
+            border-color: #004494;
+        }
+
+        .nav-tabs .nav-link {
+            color: #0056b3;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #333;
+        }
     </style>
 
 </head>
@@ -50,80 +68,131 @@
     <div class="container pt-5">
 
         <!-- Profile Header -->
-        <div class="text-center mb-4">
-            <div class="profile-avatar mx-auto mb-3">
-                <i class="bi bi-person-circle" style="font-size: 80px; color: #6c757d;"></i>
+
+        <div class="text-center mb-4 pt-4">
+            <div class="profile-avatar mx-auto mb-3 d-flex align-items-center justify-content-center"
+                style="width: 80px; height: 80px; background-color: #0056b3; border-radius: 50%; color: white; font-size: 36px; font-weight: bold; box-shadow: 0 0 20px rgba(0, 136, 255, 0.3);">
+                D
             </div>
-            <h4 class="mb-1">User Name</h4>
+            <h4 class="mb-1">Do-Yun Kim</h4>
             <p class="text-muted">user@email.com</p>
         </div>
 
-        <!-- Business Account Prompt -->
-        <div class="card text-bg-primary mb-4">
-            <div class="card-body text-center py-3">
-                <h6 class="card-title mb-2"><i class="bi bi-briefcase me-2"></i>Business Account</h6>
-                <p class="card-text small mb-2">Create a business profile, connect with customers</p>
-                <a href="#" class="btn btn-light btn-sm">Switch to Business</a>
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-tabs mb-4" id="profileTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="account-tab" data-bs-toggle="tab" data-bs-target="#account" type="button"
+                    role="tab" aria-controls="account" aria-selected="false">My Account</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="profileTabsContent">
+
+            <!-- Home Tab -->
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                <!-- Recently Visited Section -->
+                <h6>Recently viewed</h6>
+
+                <div class="recentlyviewed">
+                    <div class="cards-wrapper d-flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+                        <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                            <img src="images/cups.jpg" class="card-img-top" alt="cups"
+                                style="height: 100px; object-fit: cover;">
+                            <div class="card-body p-2">
+                                <h6 class="card-title small">Cups Bingsu</h6>
+                                <p class="card-text text-dark" style="font-size: 0.75rem;">Dessert</p>
+                            </div>
+                        </div>
+                        <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                            <img src="images/owlminerva.jpg" class="card-img-top" alt="location"
+                                style="height: 100px; object-fit: cover;">
+                            <div class="card-body p-2">
+                                <h6 class="card-title small">Owl of Minerva</h6>
+                                <p class="card-text text-dark" style="font-size: 0.75rem;">Restaurant</p>
+                            </div>
+                        </div>
+                        <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                            <img src="images/hodo.jpg" class="card-img-top" alt="location"
+                                style="height: 100px; object-fit: cover;">
+                            <div class="card-body p-2">
+                                <h6 class="card-title small">Hodo Kwaja</h6>
+                                <p class="card-text text-dark" style="font-size: 0.75rem;">Bakery</p>
+                            </div>
+                        </div>
+                        <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                            <img src="images/innisfree.jpg" class="card-img-top" alt="location"
+                                style="height: 100px; object-fit: cover;">
+                            <div class="card-body p-2">
+                                <h6 class="card-title small">Innisfree</h6>
+                                <p class="card-text text-dark" style="font-size: 0.75rem;">Beauty</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Recently Visited Section -->
-        <h6>Recently viewed</h6>
 
-        <div class="recentlyviewed">
-            <div class="cards-wrapper d-flex gap-2 overflow-x-auto hide-scrollbar pb-2">
-                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
-                    <img src="images/cups.jpg" class="card-img-top" alt="cups"
-                        style="height: 100px; object-fit: cover;">
-                    <div class="card-body p-2">
-                        <h6 class="card-title small">Cups Bingsu</h6>
-                        <p class="card-text text-dark" style="font-size: 0.75rem;">Dessert</p>
-                    </div>
+            <!-- My Account Tab -->
+            <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
+
+                <!-- Business Account Prompt -->
+                <div class="text-center p-3 ">
+                    <button class="btn btn-primary" onclick="showBusinessToast()">
+                        <i class="bi bi-briefcase me-2"></i>Switch to Business Account
+                    </button>
                 </div>
-                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
-                    <img src="images/owlminerva.jpg" class="card-img-top" alt="location"
-                        style="height: 100px; object-fit: cover;">
-                    <div class="card-body p-2">
-                        <h6 class="card-title small">Owl of Minerva</h6>
-                        <p class="card-text text-dark" style="font-size: 0.75rem;">Restaurant</p>
-                    </div>
+
+                <h6 class="mb-3">Settings</h6>
+
+                <div class="list-group mb-4">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-pencil me-2"></i>Edit Profile
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-translate me-2"></i>Language
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-display me-2"></i>Display Settings
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-shield-lock me-2"></i>Privacy
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-question-circle me-2"></i>Help & Support
+                    </a>
                 </div>
-                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
-                    <img src="images/hodo.jpg" class="card-img-top" alt="location"
-                        style="height: 100px; object-fit: cover;">
-                    <div class="card-body p-2">
-                        <h6 class="card-title small">Hodo Kwaja</h6>
-                        <p class="card-text text-dark" style="font-size: 0.75rem;">Bakery</p>
-                    </div>
-                </div>
-                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
-                    <img src="images/innisfree.jpg" class="card-img-top" alt="location"
-                        style="height: 100px; object-fit: cover;">
-                    <div class="card-body p-2">
-                        <h6 class="card-title small">Innisfree</h6>
-                        <p class="card-text text-dark" style="font-size: 0.75rem;">Beauty</p>
-                    </div>
+
+                <!-- Logout Button -->
+                <div class="d-grid">
+                    <button class="btn btn-outline-danger" type="button">
+                        <i class="bi bi-box-arrow-right me-2"></i> Log Out
+                    </button>
                 </div>
             </div>
-        </div>
-
-        <!-- Logout Button -->
-        <div class="d-grid mb-4">
-            <button class="btn btn-outline-danger" type="button">
-                <i class="bi bi-box-arrow-right me-2"></i> Log Out
-            </button>
         </div>
 
         <!-- Section  -->
 
-
-
-
-
-
-
-
-
+        <!-- Toast Notification -->
+        <div class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 11">
+            <div id="businessToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <i class="bi bi-briefcase me-2"></i>
+                    <strong class="me-auto">Business Account</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Sign up for a business account to connect with customers!
+                </div>
+            </div>
+        </div>
 
         <!--Bottom Nav Bar -->
 
@@ -132,6 +201,14 @@
         </div>
 
     </div>
+
+    <script>
+        function showBusinessToast() {
+            const toastEl = document.getElementById('businessToast');
+            const toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        }
+    </script>
 </body>
 
 </html>
