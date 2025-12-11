@@ -28,15 +28,75 @@
 
     <link href="style.css" rel="stylesheet">
 
+    <style>
+        .bottom-sheet-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1040;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .bottom-sheet-overlay.show {
+            opacity: 1;
+        }
+
+        .bottom-sheet {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 24px 24px 0 0;
+            z-index: 1050;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .bottom-sheet.show {
+            transform: translateY(0);
+        }
+
+        .bottom-sheet-handle {
+            width: 40px;
+            height: 4px;
+            background: #d1d5db;
+            border-radius: 2px;
+            margin: 12px auto;
+            cursor: pointer;
+        }
+
+        .bottom-sheet-header {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <div class="col-12" id="header">
+    <!-- Overlay -->
+    <div class="bottom-sheet-overlay" id="overlay"></div>
 
-    </div>
+    <!-- Bottom Sheet -->
+    <div class="bottom-sheet" id="bottomSheet">
+        <div class="bottom-sheet-header">
+            <div class="bottom-sheet-handle"></div>
+        </div>
 
-    <div class="container pt-3">
+        <div class="container pb-3">
 
         <!-- Image Carousel -->
         <div id="businessCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -67,7 +127,7 @@
             
             <!-- Rating -->
             <div class="mb-3">
-                <span class="badge bg-warning text-dark me-2">
+                <span class="badge bg-light text-dark me-2">
                     <i class="bi bi-star-fill"></i> 4.5 (128 reviews)
                 </span>
                 <span class="badge bg-secondary">Closed • Opens at 10:00 AM</span>
@@ -81,7 +141,7 @@
                         <i class="bi bi-geo-alt-fill text-danger me-3" style="font-size: 1.25rem;"></i>
                         <div>
                             <p class="mb-0"><strong>Location</strong></p>
-                            <p class="mb-0 text-muted">123 Korean Street, Toronto, ON M5V 3A8</p>
+                            <p class="mb-0 text-muted">123 Bloor Street, Toronto, ON M5V 3A8</p>
                         </div>
                     </div>
 
@@ -94,13 +154,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Call Button -->
-            <div class="d-grid gap-2 mb-3">
-                <a href="tel:+14165550123" class="btn btn-primary btn-lg">
-                    <i class="bi bi-telephone me-2"></i> Call Now
-                </a>
             </div>
         </div>
 
@@ -164,26 +217,51 @@
             </div>
         </div>
 
-        <!--Bottom Nav Bar -->
-
-        <div class="col-12" id="menu">
-
-        </div>
-
+    </div>
     </div>
 
     <script>
-        // Initialize map
-        const map = L.map('map').setView([43.6629, -79.3957], 13);
-        
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors',
-            maxZoom: 19
-        }).addTo(map);
+        // Show bottom sheet on load
+        window.addEventListener('DOMContentLoaded', function() {
+            const bottomSheet = document.getElementById('bottomSheet');
+            const overlay = document.getElementById('overlay');
+            
+            setTimeout(() => {
+                bottomSheet.classList.add('show');
+                overlay.classList.add('show');
+            }, 100);
 
-        // Add marker
-        const marker = L.marker([43.6629, -79.3957]).addTo(map)
-            .bindPopup('<strong>Business Name</strong><br>123 Korean Street, Toronto, ON');
+            // Initialize map after bottom sheet is shown
+            setTimeout(() => {
+                const map = L.map('map').setView([43.6629, -79.3957], 13);
+                
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors',
+                    maxZoom: 19
+                }).addTo(map);
+
+                const marker = L.marker([43.6629, -79.3957]).addTo(map)
+                    .bindPopup('<strong>Business Name</strong><br>123 Korean Street, Toronto, ON');
+            }, 400);
+
+            // Close on overlay click
+            overlay.addEventListener('click', function() {
+                closeBottomSheet();
+            });
+
+            // Close on handle click
+            document.querySelector('.bottom-sheet-handle').addEventListener('click', function() {
+                closeBottomSheet();
+            });
+
+            function closeBottomSheet() {
+                bottomSheet.classList.remove('show');
+                overlay.classList.remove('show');
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 300);
+            }
+        });
     </script>
 
 </body>
