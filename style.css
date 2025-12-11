@@ -1,0 +1,46 @@
+body {
+    padding-bottom: 180px;
+}
+
+.cards-wrapper{
+     display: flex;
+}
+
+.container {
+
+}
+
+#carouselchips{
+}
+
+H6{
+    padding-top: 24px;
+    padding-bottom: 14px;
+}
+
+.nav-item:hover i {
+    color: rgb(0, 102, 255) !important;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-img{
+    height: 106px;
+}
+
+.cards-wrapper{
+    justify-content: center;
+
+}
+
+.card-title text-center{
+    padding: 0;
+}
+
+option-card-body{
+    padding: 0;
+}

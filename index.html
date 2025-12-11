@@ -1,1 +1,228 @@
-Welcome to KTown
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- METADATA -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KTown demo</title>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div class="col-12" id="header">
+
+    </div>
+
+    <div class="container pt-5">
+
+        <!--Chips -->
+
+        <div class="row" id="chips">
+
+
+        </div>
+
+        <!--Welcome Card -->
+
+        <div id="welcomecard"class="card mx-auto w-100 pb-1 text-bg-dark">
+            <h5 class="welcomecard-title mx-auto pt-3">Welcome to KTOWN</h5>
+            <p class="welcomecard-text mx-auto">Explore Korean businesses in the GTA</p>
+        </div>
+
+        <!--Cards Section 1 -->
+        
+        <h6>Popular Locations</h6>
+
+        <div id="carousellocations" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="cards-wrapper">
+
+                    <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
+                        <img src="owlminerva.jpg" class="card-img-top" alt="owlminerva">
+                        <div class="card-img-overlay text-end">
+                            <i class="bi bi-heart text-light"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text mb-0">Location</p>
+                            <small class="text-muted mb-0">RATING</small>
+                            <a href="gohere1.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
+                        <img src="hodo.jpg" class="card-img-top" alt="hodo">
+                        <div class="card-img-overlay text-end">
+                            <i class="bi bi-heart-fill text-light"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text mb-0">Location</p>
+                            <small class="text-muted mb-0">RATING</small>
+                            <a href="gohere1.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="cards-wrapper">
+
+                    <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
+                        <img src="hodo.jpg" class="card-img-top" alt="hodo">
+                        <div class="card-img-overlay text-end">
+                            <i class="bi bi-heart text-light"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text mb-0">Location</p>
+                            <small class="text-muted mb-0">RATING</small>
+                            <a href="gohere1.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
+                        <img src="union.jpg" class="card-img-top" alt="union">
+                        <div class="card-img-overlay text-end">
+                            <i class="bi bi-heart text-light"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text mb-0">Location</p>
+                            <small class="text-muted mb-0">RATING</small>
+                            <a href="gohere1.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousellocations" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousellocations" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        
+        <!-- Section 1 MODALS -->
+
+
+
+        <!-- Cards Section 2 -->
+        
+        <h6>Upcoming Events</h6>
+
+        <div id="carouselevents" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="cards-wrapper">
+
+                    <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
+                        <img src="union.jpg" class="card-img-top" alt="union">
+                        <div class="card-img-overlay text-end">
+                            <i class="bi bi-heart text-light"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text mb-0">Location</p>
+                            <small class="text-muted mb-0">RATING</small>
+                            <a href="gohere1.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
+                        <img src="union.jpg" class="card-img-top" alt="union">
+                        <div class="card-img-overlay text-end">
+                            <i class="bi bi-heart text-light"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text mb-0">Location</p>
+                            <small class="text-muted mb-0">RATING</small>
+                            <a href="gohere1.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="cards-wrapper">
+
+                    <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
+                        <img src="union.jpg" class="card-img-top" alt="union">
+                        <div class="card-img-overlay text-end">
+                            <i class="bi bi-heart text-light"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text mb-0">Location</p>
+                            <small class="text-muted mb-0">RATING</small>
+                            <a href="gohere1.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
+                        <img src="union.jpg" class="card-img-top" alt="union">
+                        <div class="card-img-overlay text-end">
+                            <i class="bi bi-heart text-light"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text mb-0">Location</p>
+                            <small class="text-muted mb-0">RATING</small>
+                            <a href="gohere1.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselevents" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselevents" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--Bottom Nav Bar -->
+
+        <div class="col-12" id="menu">
+
+        </div>
+
+    </div>
+</body>
+</html>
