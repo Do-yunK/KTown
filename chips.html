@@ -1,22 +1,48 @@
-<div id="carouselchips" class="carousel slide p-3">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <span class="badge text-bg-light">All</span>
-            <span class="badge text-bg-light">Nearby</span>
-
-        </div>
-        <div class="carousel-item">
-            <span class="badge text-bg-light">label</span>
-            <span class="badge text-bg-light">label</span>
-            <span class="badge text-bg-light">label</span>
-        </div>
+<div id="chipslider" class="p-3">
+    <div class="d-flex gap-2 overflow-x-auto pb-2 hide-scrollbar">
+        <span class="badge text-bg-dark badge-selectable">All</span>
+        <span class="badge text-bg-light badge-selectable">Nearby</span>
+        <span class="badge text-bg-light badge-selectable">Popular</span>
+        <span class="badge text-bg-light badge-selectable">Toronto</span>
+        <span class="badge text-bg-light badge-selectable">Cafe</span>
+        <span class="badge text-bg-light badge-selectable">Services</span>
+        <span class="badge text-bg-light badge-selectable">Care & Wellness</span>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselchips" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselchips" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
+<script>
+let selectedBadge = document.querySelector('.badge-selectable.text-bg-dark');
+
+document.querySelectorAll('.badge-selectable').forEach(badge => {
+    badge.addEventListener('click', function() {
+        // Only switch if clicking a different badge
+        if (this !== selectedBadge) {
+            // Deselect previous badge
+            if (selectedBadge) {
+                selectedBadge.classList.remove('text-bg-dark');
+                selectedBadge.classList.add('text-bg-light');
+                selectedBadge.style.transform = '';
+                selectedBadge.style.boxShadow = '';
+            }
+            // Select new badge
+            this.classList.remove('text-bg-light');
+            this.classList.add('text-bg-dark');
+            selectedBadge = this;
+            // Apply hover state on selection
+            this.style.transform = 'scale(1.1)';
+            this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        }
+    });
+});
+
+// Remove hover state when clicking off badge
+document.addEventListener('click', function(e) {
+    if (selectedBadge && !e.target.classList.contains('badge-selectable')) {
+        // Remove selected background and hover state
+        selectedBadge.classList.remove('text-bg-dark');
+        selectedBadge.classList.add('text-bg-light');
+        selectedBadge.style.transform = '';
+        selectedBadge.style.boxShadow = '';
+        selectedBadge = null;
+    }
+});
+</script>

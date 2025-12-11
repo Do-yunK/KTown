@@ -41,3 +41,30 @@ option-card-body{
 .listcard-text {
     padding-bottom: 0;
 }
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+#listcard {
+    min-height: 120px;
+}
+
+#listcard .row {
+    height: 100%;
+}
+
+.badge {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
