@@ -6,12 +6,6 @@ body {
      display: flex;
 }
 
-.container {
-
-}
-
-#carouselchips{
-}
 
 H6{
     padding-top: 24px;
@@ -43,4 +37,7 @@ H6{
 
 option-card-body{
     padding: 0;
+}
+.listcard-text {
+    padding-bottom: 0;
 }
