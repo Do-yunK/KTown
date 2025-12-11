@@ -58,7 +58,7 @@
                     <div class="cards-wrapper">
 
                         <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/owlminerva.jpg" class="card-img-top" alt="owlminerva">
+                            <img src="images/cups.jpg" class="card-img-top" alt="owlminerva">
                             <div class="card-img-overlay text-end">
                                 <i class="bi bi-heart text-light"></i>
                             </div>
@@ -71,9 +71,9 @@
                             </div>
                         </div>
                         <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/hodo.jpg" class="card-img-top" alt="hodo">
+                            <img src="images/owlminerva.jpg" class="card-img-top" alt="hodo">
                             <div class="card-img-overlay text-end">
-                                <i class="bi bi-heart-fill text-light"></i>
+                                <i class="bi bi-heart text-light"></i>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
@@ -102,7 +102,7 @@
                             </div>
                         </div>
                         <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/cups.jpg" class="card-img-top" alt="union">
+                            <img src="images/innisfree.jpg" class="card-img-top" alt="union">
                             <div class="card-img-overlay text-end">
                                 <i class="bi bi-heart text-light"></i>
                             </div>
@@ -151,7 +151,7 @@
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text mb-0">Location</p>
                                 <small class="text-muted mb-0">RATING</small>
-                                <a href="gohere1.html" class="stretched-link"></a>
+                  
                             </div>
                         </div>
                         <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
@@ -163,7 +163,7 @@
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text mb-0">Location</p>
                                 <small class="text-muted mb-0">RATING</small>
-                                <a href="gohere1.html" class="stretched-link"></a>
+                           
                             </div>
                         </div>
 
@@ -182,7 +182,7 @@
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text mb-0">Location</p>
                                 <small class="text-muted mb-0">RATING</small>
-                                <a href="gohere1.html" class="stretched-link"></a>
+                     
                             </div>
                         </div>
                         <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
@@ -194,7 +194,7 @@
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text mb-0">Location</p>
                                 <small class="text-muted mb-0">RATING</small>
-                                <a href="gohere1.html" class="stretched-link"></a>
+                         
                             </div>
                         </div>
 
@@ -233,6 +233,15 @@
             // ensure transition runs
             requestAnimationFrame(function () {
                 el.classList.add('visible');
+            });
+            
+            // Add heart icon toggle functionality
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('bi-heart')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.target.classList.toggle('bi-heart-fill');
+                }
             });
         });
         </script>

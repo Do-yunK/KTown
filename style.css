@@ -70,6 +70,16 @@ option-card-body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.bi-heart {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.bi-heart:hover {
+    transform: scale(1.15);
+}
+
 /* Welcome card fade-in */
 #welcomecard {
     opacity: 0;
