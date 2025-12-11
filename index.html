@@ -226,6 +226,17 @@
         </div>
 
     </div>
-</body>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var el = document.getElementById('welcomecard');
+            if (!el) return;
+            // ensure transition runs
+            requestAnimationFrame(function () {
+                el.classList.add('visible');
+            });
+        });
+        </script>
 
-</html>
+    </body>
+
+    </html>
