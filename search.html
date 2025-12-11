@@ -29,13 +29,27 @@
             background-color: #000000;
             color: #ffffff;
         }
-        
+
         .card.border-0 {
             background-color: #000000;
         }
-        
+
         .card.border-0 .card-title {
             color: #ffffff;
+        }
+
+        .recentlyviewed .cards-wrapper {
+            justify-content: flex-start;
+            padding-left: 0;
+        }
+
+        .recentlyviewed .card:first-child {
+            margin-left: 0 !important;
+        }
+
+        .recentlyviewed .card-title {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
         }
     </style>
 
@@ -58,82 +72,43 @@
 
         <h6>Recently viewed</h6>
 
-        <div id="carouselevents" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="cards-wrapper">
-
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/bakery.jpg" class="card-img-top" alt="bakery">
-
-                            <div class="card-body">
-                                <p class="card-text mb-0">Cozy Cafe</p>
-                                <a href="" class="stretched-link"></a>
-                            </div>
-                        </div>
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/painter.jpg" class="card-img-top" alt="painter">
-
-                            <div class="card-body">
-                                <p class="card-text mb-0">Home Reno...</p>
-                                <a href="" class="stretched-link"></a>
-                            </div>
-                        </div>
-
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="images/hodo.jpg" class="card-img-top" alt="hodo">
-
-                            <div class="card-body">
-                                <p class="card-text mb-0">Title</p>
-                                <a href="" class="stretched-link"></a>
-                            </div>
-                        </div>
+        <div class="recentlyviewed">
+            <div class="cards-wrapper d-flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/cups.jpg" class="card-img-top" alt="cups"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Cups Bingsu</h6>
+                        <p class="card-text text-light" style="font-size: 0.75rem;">Dessert</p>
                     </div>
                 </div>
-
-                <!-- 2nd card set -->
-
-                <div class="carousel-item">
-                    <div class="cards-wrapper">
-
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="union.jpg" class="card-img-top" alt="union">
-
-                            <div class="card-body">
-                                <p class="card-text mb-0">Title</p>
-                                <a href="gohere1.html" class="stretched-link"></a>
-                            </div>
-                        </div>
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="union.jpg" class="card-img-top" alt="union">
-
-                            <div class="card-body">
-                                <p class="card-text mb-0">Title</p>
-                                <a href="gohere1.html" class="stretched-link"></a>
-                            </div>
-                        </div>
-
-                        <div class="card border-top-0 border-start-0 border-end-0 mx-2" style="width: 18rem;">
-                            <img src="union.jpg" class="card-img-top" alt="union">
-
-                            <div class="card-body">
-                                <p class="card-text mb-0">Location</p>
-                                <a href="gohere1.html" class="stretched-link"></a>
-                            </div>
-                        </div>
-
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/owlminerva.jpg" class="card-img-top" alt="location"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Owl of Minerva</h6>
+                        <p class="card-text text-light" style="font-size: 0.75rem;">Restaurant</p>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/hodo.jpg" class="card-img-top" alt="location"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Hodo Kwaja</h6>
+                        <p class="card-text text-light" style="font-size: 0.75rem;">Bakery</p>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
+                    <img src="images/innisfree.jpg" class="card-img-top" alt="location"
+                        style="height: 100px; object-fit: cover;">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Innisfree</h6>
+                        <p class="card-text text-light" style="font-size: 0.75rem;">Beauty</p>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselevents" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselevents" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+
 
         <!-- Directory Cards -->
 

@@ -24,6 +24,27 @@
 
     <link href="style.css" rel="stylesheet">
 
+    <style>
+        .listcard {
+            height: 120px;
+        }
+        
+        .listcard .row {
+            height: 100%;
+        }
+        
+        .listcard .col-4 {
+            overflow: hidden;
+        }
+        
+        .listcard .card-img {
+            height: 120px;
+            width: 100%;
+            object-fit: cover;
+            padding: 8px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -33,20 +54,16 @@
 
     <div class="container pt-5">
 
-
-        <!-- Section  -->
-
         <h6>Your Favourites</h6>
 
-        <div id="listcard" class="card mx-auto w-100 pb-1 border-start-0 border-end-0 rounded-0">
+        <div class="listcard card w-100 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4">
-                    <img src="images/bakery.jpg" class="card-img rounded-0" alt="bakery">
+                    <img src="images/bakery.jpg" class="card-img" alt="bakery">
                     <div class="card-img-overlay col-4 text-end">
                         <i class="bi bi-heart-fill text-light"></i>
                     </div>
                 </div>
-
                 <div class="col-8">
                     <div class="card-body">
                         <h5 class="listcard-title">Cozy Korean Cafe</h5>
@@ -56,33 +73,31 @@
             </div>
         </div>
 
-        <div id="listcard" class="card mx-auto w-100 pb-1 border-top-0 border-start-0 border-end-0 rounded-0">
+        <div class="listcard card w-100 border-top-0 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4">
-                    <img src="images/kbbq.jpg" class="card-img rounded-0" alt="kbbq">
+                    <img src="images/kbbq.jpg" class="card-img" alt="kbbq">
                     <div class="card-img-overlay col-4 text-end">
                         <i class="bi bi-heart-fill text-light"></i>
                     </div>
                 </div>
-
                 <div class="col-8">
                     <div class="card-body">
                         <h5 class="listcard-title">Seoul Kitchen</h5>
-                        <p class="listcard-text">Authentic Korean BBQ & Stews</p>
+                        <p class="listcard-text">Authentic Korean BBQ</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="listcard" class="card mx-auto w-100 pb-1 border-top-0 border-start-0 border-end-0 rounded-0">
+        <div class="listcard card w-100 border-top-0 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4">
-                    <img src="images/kbeauty.jpg" class="card-img rounded-0" alt="kbeauty Store">
+                    <img src="images/kbeauty.jpg" class="card-img" alt="kbeauty Store">
                     <div class="card-img-overlay col-4 text-end">
                         <i class="bi bi-heart-fill text-light"></i>
                     </div>
                 </div>
-
                 <div class="col-8">
                     <div class="card-body">
                         <h5 class="listcard-title">K-Beauty Boutique</h5>
@@ -92,15 +107,14 @@
             </div>
         </div>
 
-        <div id="listcard" class="card mx-auto w-100 pb-1 border-top-0 border-start-0 border-end-0 rounded-0">
+        <div class="listcard card w-100 border-top-0 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4">
-                    <img src="images/stand.jpg" class="card-img rounded-0" alt="stand">
+                    <img src="images/stand.jpg" class="card-img" alt="stand">
                     <div class="card-img-overlay col-4 text-end">
                         <i class="bi bi-heart-fill text-light"></i>
                     </div>
                 </div>
-
                 <div class="col-8">
                     <div class="card-body">
                         <h5 class="listcard-title">Street Food Stand</h5>
@@ -110,20 +124,7 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-        <!--Bottom Nav Bar -->
-
-        <div class="col-12" id="menu">
-
-        </div>
+        <div class="col-12" id="menu"></div>
 
     </div>
 </body>
