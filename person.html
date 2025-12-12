@@ -25,6 +25,49 @@
     <link href="style.css" rel="stylesheet">
 
     <style>
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .card {
+            background-color: #ffffff;
+            color: #212529;
+        }
+
+        .card-text {
+            color: #6c757d !important;
+        }
+
+        .text-muted {
+            color: #6c757d !important;
+        }
+
+        .list-group-item {
+            background-color: #ffffff;
+            color: #212529;
+            border-color: #dee2e6;
+        }
+
+        .list-group-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .nav-tabs {
+            border-bottom-color: #dee2e6;
+        }
+
+        .nav-tabs .nav-link {
+            color: #0056b3;
+            border-color: transparent;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #0056b3;
+            background-color: #ffffff;
+            border-color: #dee2e6 #dee2e6 #ffffff;
+        }
+
         .recentlyviewed .cards-wrapper {
             justify-content: flex-start;
             padding-left: 0;
@@ -49,12 +92,91 @@
             border-color: #004494;
         }
 
-        .nav-tabs .nav-link {
-            color: #0056b3;
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
         }
 
-        .nav-tabs .nav-link.active {
-            color: #333;
+        .btn-outline-danger:hover {
+            background-color: #dc3545;
+            color: #ffffff;
+        }
+
+        h4, h6 {
+            color: #212529;
+        }
+
+        small {
+            color: #6c757d;
+        }
+
+        .profile-header {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><defs><linearGradient id="grad1" x1="0%25" y1="0%25" x2="100%25" y2="100%25"><stop offset="0%25" style="stop-color:%230056b3;stop-opacity:1" /><stop offset="100%25" style="stop-color:%2300a3ff;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23grad1)" width="1000" height="300"/><circle cx="100" cy="50" r="80" fill="rgba(255,255,255,0.05)"/><circle cx="900" cy="250" r="120" fill="rgba(255,255,255,0.03)"/><circle cx="500" cy="150" r="60" fill="rgba(255,255,255,0.04)"/><path d="M0,100 Q250,50 500,100 T1000,100" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/><path d="M0,200 Q250,180 500,200 T1000,200" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none"/></svg>'),
+                        linear-gradient(135deg, #0056b3 0%, #00a3ff 100%);
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 3rem 1rem 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 86, 179, 0.3);
+        }
+
+        .profile-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .profile-avatar {
+            position: relative;
+            z-index: 1;
+        }
+
+        .member-badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .activity-stats .card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .activity-stats .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 86, 179, 0.3) !important;
+        }
+
+        .quick-action-btn {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            color: #212529;
+            transition: all 0.2s ease;
+        }
+
+        .quick-action-btn:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            color: #ffffff;
+            transform: translateY(-2px);
         }
     </style>
 
@@ -68,14 +190,16 @@
     <div class="container pt-5">
 
         <!-- Profile Header -->
-
-        <div class="text-center mb-4 pt-4">
+        <div class="profile-header text-center">
             <div class="profile-avatar mx-auto mb-3 d-flex align-items-center justify-content-center"
-                style="width: 80px; height: 80px; background-color: #0056b3; border-radius: 50%; color: white; font-size: 36px; font-weight: bold; box-shadow: 0 0 20px rgba(0, 136, 255, 0.3);">
+                style="width: 80px; height: 80px; background-color: #ffffff; border-radius: 50%; color: #0056b3; font-size: 36px; font-weight: bold; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
                 D
             </div>
             <h4 class="mb-1">Do-Yun Kim</h4>
-            <p class="text-muted">user@email.com</p>
+            <p class="mb-2" style="color: rgba(255,255,255,0.8);">user@email.com</p>
+            <span class="member-badge">
+                <i class="bi bi-star-fill me-1"></i>Member since 2023
+            </span>
         </div>
 
         <!-- Tabs Navigation -->
@@ -96,6 +220,51 @@
             <!-- Home Tab -->
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
+                <!-- Activity Stats -->
+                <div class="row g-3 mb-4 activity-stats">
+                    <div class="col-4">
+                        <div class="card text-center border-0 shadow-sm h-100">
+                            <div class="card-body p-3">
+                                <i class="bi bi-heart-fill" style="font-size: 1.5rem; color: #ec4899;"></i>
+                                <h4 class="mt-2 mb-0" style="color: #212529;">12</h4>
+                                <small>Favorites</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card text-center border-0 shadow-sm h-100">
+                            <div class="card-body p-3">
+                                <i class="bi bi-bookmark-fill" style="font-size: 1.5rem; color: #0056b3;"></i>
+                                <h4 class="mt-2 mb-0" style="color: #212529;">24</h4>
+                                <small>Bookmarks</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card text-center border-0 shadow-sm h-100">
+                            <div class="card-body p-3">
+                                <i class="bi bi-star-fill" style="font-size: 1.5rem; color: #ffc107;"></i>
+                                <h4 class="mt-2 mb-0" style="color: #212529;">8</h4>
+                                <small>Reviews</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="row g-2 mb-4">
+                    <div class="col-6">
+                        <button class="btn quick-action-btn w-100 py-2">
+                            <i class="bi bi-compass me-2"></i>Explore Nearby
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn quick-action-btn w-100 py-2">
+                            <i class="bi bi-share me-2"></i>Share Profile
+                        </button>
+                    </div>
+                </div>
+
                 <!-- Recently Visited Section -->
                 <h6>Recently viewed</h6>
 
@@ -110,11 +279,11 @@
                             </div>
                         </div>
                         <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">
-                            <img src="images/owlminerva.jpg" class="card-img-top" alt="location"
+                            <img src="images/baristas.jpg" class="card-img-top" alt="location"
                                 style="height: 100px; object-fit: cover;">
                             <div class="card-body p-2">
-                                <h6 class="card-title small">Owl of Minerva</h6>
-                                <p class="card-text text-dark" style="font-size: 0.75rem;">Restaurant</p>
+                                <h6 class="card-title small">Coffee Club</h6>
+                                <p class="card-text text-dark" style="font-size: 0.75rem;">Cafe</p>
                             </div>
                         </div>
                         <div class="card border-0 shadow-sm" style="min-width: 160px; width: 160px;">

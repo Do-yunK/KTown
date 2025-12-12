@@ -25,22 +25,43 @@
     <link href="style.css" rel="stylesheet">
 
     <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .favorites-count {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #ec4899 0%, #ff6b9d 100%);
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+            box-shadow: 0 2px 10px rgba(236, 72, 153, 0.3);
+        }
+
+        h6 {
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+
         .listcard {
             height: 120px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background-color: #1a1a1a;
+            border-color: #333333 !important;
         }
 
         .listcard:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
         }
         
         .listcard .row {
             height: 100%;
-        }
-        
-        .listcard .col-4 {
-            overflow: hidden;
         }
         
         .listcard .card-img {
@@ -51,6 +72,11 @@
 
         .listcard-title {
             padding-top: 0 !important;
+            color: #ffffff;
+        }
+
+        .listcard-text {
+            color: #adb5bd;
         }
     </style>
 
@@ -63,7 +89,13 @@
 
     <div class="container pt-5">
 
-        <h6>Your Favourites</h6>
+        <h6>
+            Your Favourites
+            <span class="favorites-count">
+                <i class="bi bi-heart-fill"></i>
+                <span>5</span>
+            </span>
+        </h6>
 
         <div class="listcard card w-100 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
