@@ -27,16 +27,22 @@
     <style>
         .listcard {
             height: 120px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
+        .listcard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
         .listcard .row {
             height: 100%;
         }
-        
+
         .listcard .col-4 {
             overflow: hidden;
         }
-        
+
         .listcard .card-img {
             height: 120px;
             width: 100%;
@@ -56,25 +62,62 @@
 
         <!--Welcome Card -->
 
-        <div id="welcomecard" class="card mx-auto w-100 pb-1 text-bg-dark">
-            <h5 class="welcomecard-title mx-auto pt-3">Welcome to KTOWN</h5>
-            <p class="welcomecard-text mx-auto">Explore Korean businesses in the GTA</p>
+        <div id="welcomecard" class="card mx-auto w-100 pb-1 text-bg-dark text-center">
+            <h5 class="welcomecard-title mx-auto pt-3">Welcome to Services</h5>
+            <p class="welcomecard-text mx-auto">We've made it easy to connect with the experts that keep our K-Town
+                running</p>
         </div>
 
-        <h6>Your Favourites</h6>
+        <h6>List of Services</h6>
 
         <div class="listcard card w-100 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4">
-                    <img src="images/bakery.jpg" class="card-img" alt="bakery">
+                    <img src="images/realtor.jpg" class="card-img" alt="realtor">
                     <div class="card-img-overlay col-4 text-end">
-                        <i class="bi bi-heart" style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
+                        <i class="bi bi-heart"
+                            style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
                     </div>
                 </div>
                 <div class="col-8">
                     <div class="card-body">
-                        <h5 class="listcard-title">Cozy Korean Cafe</h5>
-                        <p class="listcard-text">Coffee & Korean style bakery</p>
+                        <h5 class="listcard-title">Bilingual Realtor</h5>
+                        <p class="listcard-text">Real Estate Services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="listcard card w-100 border-start-0 border-end-0 rounded-0">
+            <div class="row g-0">
+                <div class="col-4">
+                    <img src="images/socialworker.jpg" class="card-img" alt="socialworker">
+                    <div class="card-img-overlay col-4 text-end">
+                        <i class="bi bi-heart"
+                            style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h5 class="listcard-title">Immigrant Social Worker</h5>
+                        <p class="listcard-text">Social Services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listcard card w-100 border-start-0 border-end-0 rounded-0">
+            <div class="row g-0">
+                <div class="col-4">
+                    <img src="images/mechanic.jpg" class="card-img" alt="mechanic">
+                    <div class="card-img-overlay col-4 text-end">
+                        <i class="bi bi-heart"
+                            style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h5 class="listcard-title">Auto Repairs</h5>
+                        <p class="listcard-text">Car mechanic</p>
                     </div>
                 </div>
             </div>
@@ -83,15 +126,16 @@
         <div class="listcard card w-100 border-top-0 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4">
-                    <img src="images/kbbq.jpg" class="card-img" alt="kbbq">
+                    <img src="images/painter.jpg" class="card-img" alt="painter">
                     <div class="card-img-overlay col-4 text-end">
-                        <i class="bi bi-heart" style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
+                        <i class="bi bi-heart"
+                            style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
                     </div>
                 </div>
                 <div class="col-8">
                     <div class="card-body">
-                        <h5 class="listcard-title">Seoul Kitchen</h5>
-                        <p class="listcard-text">Authentic Korean BBQ</p>
+                        <h5 class="listcard-title">KS Painting</h5>
+                        <p class="listcard-text">Home Renovations</p>
                     </div>
                 </div>
             </div>
@@ -100,15 +144,16 @@
         <div class="listcard card w-100 border-top-0 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4">
-                    <img src="images/kbeauty.jpg" class="card-img" alt="kbeauty Store">
+                    <img src="images/construction.jpg" class="card-img" alt="construction">
                     <div class="card-img-overlay col-4 text-end">
-                        <i class="bi bi-heart" style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
+                        <i class="bi bi-heart"
+                            style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
                     </div>
                 </div>
                 <div class="col-8">
                     <div class="card-body">
-                        <h5 class="listcard-title">K-Beauty Boutique</h5>
-                        <p class="listcard-text">Korean skincare & cosmetics</p>
+                        <h5 class="listcard-title">Construction Crew</h5>
+                        <p class="listcard-text">Building Maintenance</p>
                     </div>
                 </div>
             </div>
@@ -117,15 +162,16 @@
         <div class="listcard card w-100 border-top-0 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4">
-                    <img src="images/stand.jpg" class="card-img" alt="stand">
+                    <img src="images/plumber.jpg" class="card-img" alt="plumber">
                     <div class="card-img-overlay col-4 text-end">
-                        <i class="bi bi-heart" style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
+                        <i class="bi bi-heart"
+                            style="color: white; -webkit-text-stroke: 1px white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
                     </div>
                 </div>
                 <div class="col-8">
                     <div class="card-body">
-                        <h5 class="listcard-title">Street Food Stand</h5>
-                        <p class="listcard-text">Korean street food & snacks</p>
+                        <h5 class="listcard-title">Plumbing Services</h5>
+                        <p class="listcard-text">Maintenance and Repair</p>
                     </div>
                 </div>
             </div>
