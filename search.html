@@ -40,6 +40,7 @@
 
         .recentlyviewed .card {
             background-color: #1a1a1a;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
         }
 
         .recentlyviewed .card-text {
@@ -62,6 +63,24 @@
 
         .option-card-body .card-title {
             padding-top: 0 !important;
+        }
+
+        /* Lift effect for recently viewed cards */
+        .recentlyviewed .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0, 86, 179, 0.18);
+        }
+
+        /* Lift + subtle scale for directory option images only */
+        .option-img {
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .option-img:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 86, 179, 0.18);
         }
     </style>
 
@@ -129,22 +148,22 @@
         <div class="cards-wrapper">
 
             <div class="card border-0 mx-2" style="width: 6rem;">
-                <img src="images/entertainment.svg" class="card-img" alt="entertainment">
+                <img src="images/entertainment.svg" class="card-img option-img" alt="entertainment">
                 <div class="option-card-body">
                     <h6 class="card-title text-center">Entertain-ment</h6>
                 </div>
             </div>
 
             <div class="card border-0 mx-2" style="width: 6rem;">
-                <img src="images/events.svg" class="card-img" alt="events">
+                <img src="images/events.svg" class="card-img option-img" alt="events">
                 <div class="option-card-body">
                     <h6 class="card-title text-center">Events</h6>
                 </div>
             </div>
 
             <div class="card border-0 mx-2" style="width: 6rem;">
-                <img src="images/services.svg" class="card-img" alt="services"
-                    style="filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.5));">
+                <img src="images/services.svg" class="card-img option-img" alt="services"
+                    style="border: 2px solid #0056b3; border-radius: 8px;">
                 <div class="option-card-body">
                     <h6 class="card-title text-center">Services</h6>
                     <a href="services.html" class="stretched-link"></a>
@@ -155,20 +174,20 @@
         <div class="cards-wrapper">
 
             <div class="card border-0 mx-2" style="width: 6rem;">
-                <img src="images/shop.svg" class="card-img" alt="shop">
+                <img src="images/shop.svg" class="card-img option-img" alt="shop">
                 <div class="option-card-body">
                     <h6 class="card-title text-center">Shops & Retail</h6>
                 </div>
             </div>
             <div class="card border-0 mx-2" style="width: 6rem;">
-                <img src="images/foodnbev.svg" class="card-img" alt="foodnbev">
+                <img src="images/foodnbev.svg" class="card-img option-img" alt="foodnbev">
                 <div class="option-card-body">
                     <h6 class="card-title text-center">Food & Drink</h6>
                 </div>
             </div>
 
             <div class="card border-0 mx-2" style="width: 6rem;">
-                <img src="images/care.svg" class="card-img" alt="care">
+                <img src="images/care.svg" class="card-img option-img" alt="care">
                 <div class="option-card-body">
                     <h6 class="card-title text-center">Care & Wellness</h6>
                 </div>
@@ -177,20 +196,20 @@
         <div class="cards-wrapper">
 
             <div class="card border-0 mx-2" style="width: 6rem;">
-                <img src="images/community.svg" class="card-img" alt="community">
+                <img src="images/community.svg" class="card-img option-img" alt="community">
                 <div class="option-card-body">
                     <h6 class="card-title text-center">Community Services</h6>
                 </div>
             </div>
             <div class="card border-0 mx-2" style="width: 6rem;">
-                <img src="images/news.svg" class="card-img" alt="news">
+                <img src="images/news.svg" class="card-img option-img" alt="news">
                 <div class="option-card-body">
                     <h6 class="card-title text-center">News</h6>
                 </div>
             </div>
 
             <div class="card border-0 mx-2" style="width: 6rem;">
-                <img src="images/ktown.svg" class="card-img" alt="ktown">
+                <img src="images/ktown.svg" class="card-img option-img" alt="ktown">
                 <div class="option-card-body">
                     <h6 class="card-title text-center">Korea Town</h6>
                 </div>

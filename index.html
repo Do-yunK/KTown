@@ -116,6 +116,8 @@
             border: none;
             border-radius: 5px;
             padding: 0.4rem 0.6rem;
+            margin-top: 0.5rem;
+            /* nudge down slightly from welcome card */
             width: auto;
             text-align: left;
             font-size: 0.85rem;
@@ -131,16 +133,35 @@
             background-color: #e9ecef;
         }
 
-        .filter-dropdown-btn i {
+        .filter-dropdown-btn .chevron-icon {
             transition: transform 0.2s ease;
         }
 
-        .filter-dropdown-btn[aria-expanded="true"] i {
+        .filter-dropdown-btn[aria-expanded="true"] .chevron-icon {
             transform: rotate(180deg);
         }
 
         .distance-filter-content {
             margin-top: 0.5rem;
+        }
+
+        /* Welcome card: reuse profile header texture */
+        #welcomecard {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><defs><linearGradient id="grad1" x1="0%25" y1="0%25" x2="100%25" y2="100%25"><stop offset="0%25" style="stop-color:%231a1a1a;stop-opacity:1" /><stop offset="100%25" style="stop-color:%232a2a2a;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23grad1)" width="1000" height="300"/><circle cx="100" cy="50" r="80" fill="rgba(255,255,255,0.02)"/><circle cx="900" cy="250" r="120" fill="rgba(255,255,255,0.015)"/><circle cx="500" cy="150" r="60" fill="rgba(255,255,255,0.02)"/><path d="M0,100 Q250,50 500,100 T1000,100" stroke="rgba(255,255,255,0.04)" stroke-width="2" fill="none"/><path d="M0,200 Q250,180 500,200 T1000,200" stroke="rgba(255,255,255,0.03)" stroke-width="2" fill="none"/></svg>'),
+                linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(6, 6, 6, 0.98) 100%);
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            padding: 1.25rem 1rem;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        /* Disable the global .card hover lift for the welcome card */
+        #welcomecard:hover {
+            transform: none !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
         }
     </style>
 
@@ -164,17 +185,18 @@
         <!--Welcome Card -->
 
         <div id="welcomecard" class="card mx-auto w-100 pb-1 text-bg-dark">
-            <h5 class="welcomecard-title mx-auto pt-3">Welcome to KTOWN</h5>
+            <h5 class="welcomecard-title mx-auto">Welcome to KTOWN</h5>
             <p class="welcomecard-text mx-auto">Explore Korean businesses in the GTA</p>
         </div>
 
         <!-- Distance Filter Dropdown -->
-        <button class="filter-dropdown-btn" type="button" data-bs-toggle="collapse" data-bs-target="#distanceFilterCollapse" aria-expanded="false" aria-controls="distanceFilterCollapse">
+        <button class="filter-dropdown-btn" type="button" data-bs-toggle="collapse"
+            data-bs-target="#distanceFilterCollapse" aria-expanded="false" aria-controls="distanceFilterCollapse">
             <i class="bi bi-sliders me-2" style="color: #0056b3;"></i>
-             Distance
-            <i class="bi bi-chevron-down float-end"></i>
+            Distance
+            <i class="bi bi-chevron-down chevron-icon float-end"></i>
         </button>
-        
+
         <div class="collapse" id="distanceFilterCollapse">
             <div class="distance-filter distance-filter-content">
                 <div class="d-flex justify-content-between align-items-center mb-1">
@@ -418,9 +440,9 @@
             // Distance slider functionality
             const slider = document.getElementById('distanceSlider');
             const distanceValue = document.getElementById('distanceValue');
-            
+
             if (slider && distanceValue) {
-                slider.addEventListener('input', function() {
+                slider.addEventListener('input', function () {
                     distanceValue.textContent = this.value;
                     // Update slider background gradient
                     const percent = ((this.value - this.min) / (this.max - this.min)) * 100;
