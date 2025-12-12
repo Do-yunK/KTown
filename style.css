@@ -79,7 +79,7 @@ option-card-body{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Welcome card fade-in */
+
 #welcomecard {
     opacity: 0;
     transform: translateY(-12px);

@@ -48,7 +48,7 @@
         /* Welcome card: textured dark background to match index welcome card */
         #welcomecard {
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><defs><linearGradient id="grad1" x1="0%25" y1="0%25" x2="100%25" y2="100%25"><stop offset="0%25" style="stop-color:%231a1a1a;stop-opacity:1" /><stop offset="100%25" style="stop-color:%232a2a2a;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23grad1)" width="1000" height="300"/><circle cx="100" cy="50" r="80" fill="rgba(255,255,255,0.02)"/><circle cx="900" cy="250" r="120" fill="rgba(255,255,255,0.015)"/><circle cx="500" cy="150" r="60" fill="rgba(255,255,255,0.02)"/><path d="M0,100 Q250,50 500,100 T1000,100" stroke="rgba(255,255,255,0.04)" stroke-width="2" fill="none"/><path d="M0,200 Q250,180 500,200 T1000,200" stroke="rgba(255,255,255,0.03)" stroke-width="2" fill="none"/></svg>'),
-                        linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(6,6,6,0.98) 100%);
+                linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(6, 6, 6, 0.98) 100%);
             background-size: cover;
             background-position: center;
             border-radius: 12px;
@@ -64,8 +64,20 @@
             gap: 0.25rem;
         }
 
-        .welcomecard-title { margin: 0; padding: 0; font-weight: 700; font-size: 1.05rem; }
-        .welcomecard-text { margin: 0; padding: 0; padding-bottom: var(--welcomecard-vpad, 0.75rem); color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+        .welcomecard-title {
+            margin: 0;
+            padding: 0;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .welcomecard-text {
+            margin: 0;
+            padding: 0;
+            padding-bottom: var(--welcomecard-vpad, 0.75rem);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
     </style>
 
 </head>
@@ -81,7 +93,8 @@
 
         <div id="welcomecard" class="card mx-auto w-100 pb-1 text-bg-dark text-center">
             <h5 class="welcomecard-title mx-auto">Welcome to Services</h5>
-            <p class="welcomecard-text mx-auto">We've made it easy to connect with the experts that keep our K-Town running</p>
+            <p class="welcomecard-text mx-auto">We've made it easy to connect with the experts that keep our K-Town
+                running</p>
         </div>
 
         <h6>List of Services</h6>
