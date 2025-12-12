@@ -37,6 +37,7 @@
         .listcard {
             height: 120px;
             transition: transform 0.2s, box-shadow 0.2s;
+            border-bottom-color: #333333 !important;
         }
 
         .listcard:hover {
@@ -51,6 +52,7 @@
         .listcard-title {
             color: #ffffff;
             margin-bottom: 0.25rem;
+            padding-top: 0 !important;
         }
 
         .listcard-text {
@@ -59,13 +61,14 @@
         }
 
         .notification-icon {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-color: #1a1a1a;
             border-radius: 15px;
             width: 70px;
             height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 86, 179, 0.4);
         }
 
         .notification-time {
@@ -82,6 +85,11 @@
             height: 8px;
             background-color: #0056b3;
             border-radius: 50%;
+        }
+
+        .listcard .card-body {
+            padding: 0;
+            padding-left: 0.5rem;
         }
     </style>
 
@@ -120,7 +128,7 @@
             <div class="notification-badge"></div>
             <div class="row g-0">
                 <div class="col-4 d-flex align-items-center justify-content-center">
-                    <div class="notification-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="notification-icon">
                         <i class="bi bi-camera" style="font-size: 2rem; color: #ffffff;"></i>
                     </div>
                 </div>
@@ -137,7 +145,7 @@
         <div class="listcard card w-100 border-top-0 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4 d-flex align-items-center justify-content-center">
-                    <div class="notification-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="notification-icon">
                         <i class="bi bi-egg-fried" style="font-size: 2rem; color: #ffffff;"></i>
                     </div>
                 </div>
@@ -154,7 +162,7 @@
         <div class="listcard card w-100 border-top-0 border-start-0 border-end-0 rounded-0">
             <div class="row g-0">
                 <div class="col-4 d-flex align-items-center justify-content-center">
-                    <div class="notification-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <div class="notification-icon">
                         <i class="bi bi-shop-window" style="font-size: 2rem; color: #ffffff;"></i>
                     </div>
                 </div>

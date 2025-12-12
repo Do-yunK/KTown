@@ -128,7 +128,7 @@
                 <div class="col-8">
                     <div class="card-body">
                         <h6 class="listcard-title">Street Food Stand</h6>
-                        <p class="listcard-text">Korean street food & snacks</p>
+                        <p class="listcard-text">Traditional street food & snacks</p>
                     </div>
                 </div>
             </div>
@@ -140,7 +140,8 @@
 
     <script>
         document.addEventListener('click', function(e) {
-            if (e.target.classList.contains('bi-heart') || e.target.classList.contains('bi-heart-fill')) {
+            if ((e.target.classList.contains('bi-heart') || e.target.classList.contains('bi-heart-fill')) && 
+                e.target.closest('.card-img-overlay')) {
                 e.preventDefault();
                 e.stopPropagation();
                 e.target.classList.toggle('bi-heart');

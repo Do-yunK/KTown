@@ -249,7 +249,8 @@
 
             // Heart icon toggle
             document.addEventListener('click', function(e) {
-                if (e.target.classList.contains('bi-heart') || e.target.classList.contains('bi-heart-fill')) {
+                if ((e.target.classList.contains('bi-heart') || e.target.classList.contains('bi-heart-fill')) && 
+                    e.target.closest('.card-img-overlay')) {
                     e.preventDefault();
                     e.stopPropagation();
                     e.target.classList.toggle('bi-heart');
