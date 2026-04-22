@@ -6,7 +6,7 @@
     <!-- METADATA -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KTown demo</title>
+    <title>ESTEEM demo</title>
 
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -155,13 +155,13 @@
             padding: 1.25rem 1rem;
             margin-bottom: 0.6rem;
             color: #ffffff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
         }
 
         /* Disable the global .card hover lift for the welcome card */
         #welcomecard:hover {
             transform: none !important;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+
         }
     </style>
 
@@ -185,17 +185,22 @@
         <!--Welcome Card -->
 
         <div id="welcomecard" class="card mx-auto w-100 pb-1 text-bg-dark">
-            <h5 class="welcomecard-title mx-auto">Welcome to KTOWN</h5>
-            <p class="welcomecard-text mx-auto">Explore Korean businesses in the GTA</p>
+            <h5 class="welcomecard-title mx-auto">Welcome to ESTEEM</h5>
+            <p class="welcomecard-text mx-auto">Explore businesses in the GTA</p>
         </div>
 
         <!-- Distance Filter Dropdown -->
-        <button class="filter-dropdown-btn" type="button" data-bs-toggle="collapse"
-            data-bs-target="#distanceFilterCollapse" aria-expanded="false" aria-controls="distanceFilterCollapse">
-            <i class="bi bi-sliders me-2" style="color: #0056b3;"></i>
-            Distance
-            <i class="bi bi-chevron-down chevron-icon float-end"></i>
-        </button>
+
+        <div class="d-flex align-items-center mb-2" style="gap: 0.5rem;">
+            <button class="filter-dropdown-btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#distanceFilterCollapse" aria-expanded="false" aria-controls="distanceFilterCollapse">
+                <i class="bi bi-sliders me-2" style="color: #0056b3;"></i>
+                Distance
+                <i class="bi bi-chevron-down chevron-icon float-end"></i>
+            </button>
+            <span class="badge" style="background: rgba(0,0,0,0.10); color: #222; font-weight: 500; letter-spacing: 0.5px; opacity: 0.6;">Korean</span>
+            <span class="badge" style="background: rgba(0,0,0,0.10); color: #222; font-weight: 500; letter-spacing: 0.5px; opacity: 0.6;">English</span>
+        </div>
 
         <div class="collapse" id="distanceFilterCollapse">
             <div class="distance-filter distance-filter-content">
